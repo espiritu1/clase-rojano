@@ -1,0 +1,13 @@
+org\example\calculadora\RestarRequest.class
+org\example\calculadora\SumarRequest.class
+com\example\demo2\CalculadoraEndPoint.class
+org\example\calculadora\MultiplicarRequest.class
+org\example\calculadora\RestarResponse.class
+org\example\calculadora\ObjectFactory.class
+com\example\demo2\CalculadoraConfing.class
+org\example\calculadora\DividirResponse.class
+org\example\calculadora\package-info.class
+org\example\calculadora\DividirRequest.class
+com\example\demo2\Demo2Application.class
+org\example\calculadora\SumarResponse.class
+org\example\calculadora\MultiplicarResponse.class
