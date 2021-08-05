@@ -1,0 +1,56 @@
+crtr + l para limpir la pantalla
+
+
+-----------INSTALAR JAVE EN W.A.S---------------
+COPIAR LINEA Y PEGARLA EN W.A.S
+
+	wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u141-b15/336fa29ff2bb4ef291e347e091f7f4a7/jdk-8u141-linux-x64.rpm
+
+	sudo yum install -y jdk-8u141-linux-x64.rpm
+
+VER LA VERCION DE JAVA
+	java -version
+
+	nano .bash_profile 
+y agrgar el export en linea ultima linea 
+
+	export JAVA_HOME=/usr/java/default
+
+ctrl + x // guardamos  tecla Y y despues enter
+
+-------subir el archivo a W.A.S-----------
+ en la carpeta donde esta el archivo demo comprimirlo en un .zip
+ en la barra de exploracion escribir cmd y escribit el comando 
+ 	psftp x.x.x.x          //x.x.x.x es la ip asignada de W.A.S
+ despues pedira un usuario y escribir
+ 	ec2-user
+ 	
+ SI MARCA ERROR ABRI //pagent de putty//
+ 	agregar la llave y repetir comandos psftp x.x.x.x y ec2-user
+
+despues escribit 
+	put demo2.zip
+
+con esto el archivo ya estara subudo a  W.A.S y cerrar la terminal
+
+------------en W.A.S---
+ descomprimir el archivo 
+ 	unzip demo2.zip
+
+entrar la la capeta 
+	cd demo2
+
+ejecutar el comando
+
+	chmod 755 mvwn 			// con esto el color del archico mvwn cambiara a verde
+							// estamos agregando privilegios con chmod 755 mvwn 
+	./mvnw spring-boot:run//con esto descagar todo el ambiete de maven y lo empieza a correr 						
+	nohup ./mvnw spring-boot:run &  
+
+	more nohup.out 			//muestra la vitacora del SW, muestra que correo en background
+
+	ps -ae
+----------para matar el servicio -----------
+ps -ae | grep java
+
+kill -9 xxxx
